@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <center>
+            <table style="padding-top: 70px;">
+                <tr>
+                    <td>
+                        Enter the Name
+                    </td>
+                    <td colspan="2">
+                        <input type="text" id="name" id="name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter the Email id
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email" required>
+                    </td>
+                    <td>
+                        <button name="check" id="check" onclick="sendMail()">SEND OTP</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter the OTP
+                    </td>
+                    <td>
+                        <input type="text" id="otp" name="otp" required>
+                    </td>
+                    <td><p id="para"></p></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center; padding-top: 5%;">
+                        <input type="submit" name="sendotp" id="sendotp" value="VERY" onclick="checkotp()">
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("lK0JC52jqWYX9M6Np");
+            })();
+        </script>
+        <script src="js/email.js"></script>
+</body>
+
+</html>
